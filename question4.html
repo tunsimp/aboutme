@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --bs-body-bg: #ffffff;
+        --bs-body-color: #212529;
+      }
+      .dark-mode {
+        --bs-body-bg: #121212;
+        --bs-body-color: #f8f9fa;
+      }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <title>Exercise 3 – Bootstrap Version</title>
+  </head>
+  <body>
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="image/hcmiu.png" alt="Logo" width="40" />
+          Nguyen Quoc Tuan
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#articles">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button id="toggleDark" class="btn btn-secondary">
+                Dark Mode
+              </button>
+              <script>
+                document
+                  .getElementById("toggleDark")
+                  .addEventListener("click", () => {
+                    document.body.classList.toggle("dark-mode");
+                  });
+              </script>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Introduction Title -->
+    <header class="text-center mt-4">
+      <h1>Frontend Developer</h1>
+    </header>
+
+    <!-- Two-Column Layout (Aside on the left, main on the right) -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- Aside Column -->
+        <aside class="col-12 col-md-4 col-lg-3 mb-4">
+          <!-- Projects -->
+          <div class="border p-2 mb-3">
+            <h4 class="border-bottom pb-2">Projects</h4>
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom">HTML Only Portfolio</li>
+              <li class="py-2 border-bottom">Calculator</li>
+              <li class="py-2 border-bottom">Quiz App</li>
+              <li class="py-2 border-bottom">Countdown Timer</li>
+              <li class="py-2">Product Upcoming Page</li>
+            </ul>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="border p-2 mb-3">
+            <h4 class="border-bottom pb-2">Work Experiences</h4>
+            <div class="py-2 border-bottom">
+              <strong>roadmap.sh</strong>
+              <p class="mb-1">Frontend Developer</p>
+              <a href="https://roadmap.sh/">Visit my profile</a>
+            </div>
+            <div class="py-2">
+              <strong>OpenSource Work</strong>
+              <p class="mb-1">Contributed to 50 opensource projects.</p>
+              <a href="https://roadmap.sh/">Visit my GitHub profile</a>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="border p-2">
+            <h4 class="border-bottom pb-2">Education</h4>
+            <p class="mb-2">Graduated with 3.76 out of 4 CGPA</p>
+            <ul class="list-unstyled">
+              <li>Computer Science</li>
+              <li>Information Technology</li>
+              <li>Software Engineering</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Main Column -->
+        <main class="col-12 col-md-8 col-lg-9 border p-3">
+          <!-- Projects / Work Experience / Education in one row -->
+          <div class="row mb-4">
+            <!-- Projects Column -->
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <h3 class="mb-3">Projects</h3>
+              <div class="border p-2 mb-2">HTML Only Portfolio</div>
+              <div class="border p-2 mb-2">Calculator</div>
+              <div class="border p-2 mb-2">Quiz App</div>
+              <div class="border p-2 mb-2">Countdown Timer</div>
+              <div class="border p-2">Product Upcoming Page</div>
+            </div>
+
+            <!-- Work Experience Column -->
+            <div class="col-12 col-md-4 mb-3 mb-md-0">
+              <h3 class="mb-3">Work Experience</h3>
+              <div class="border p-2 mb-2">
+                <strong>roadmap.sh</strong>
+                <p class="mb-1">Frontend Developer</p>
+                <a href="https://roadmap.sh/">Visit my profile</a>
+              </div>
+              <div class="border p-2">
+                <strong>OpenSource Work</strong>
+                <p class="mb-1">Contributed to 50 opensource projects.</p>
+                <a href="https://roadmap.sh/">Visit my GitHub profile</a>
+              </div>
+            </div>
+
+            <!-- Education Column -->
+            <div class="col-12 col-md-4">
+              <h3 class="mb-3">Education</h3>
+              <div class="border p-2 mb-2">
+                Graduated with 3.76 out of 4 CGPA
+              </div>
+              <ul class="list-unstyled ms-3">
+                <li>Computer Science</li>
+                <li>Information Technology</li>
+                <li>Software Engineering</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Reviews Section -->
+          <div class="row">
+            <h3 class="mb-3">Reviews from my Teachers</h3>
+
+            <!-- Review 1 -->
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p>
+                    John Doe was a brilliant student; always stood out with his
+                    assignments.
+                  </p>
+                  <p class="text-muted">Jane Doe<br />Assistant Professor</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p>
+                    John Doe was a brilliant student; always stood out with his
+                    assignments.
+                  </p>
+                  <p class="text-muted">Jane Doe<br />Assistant Professor</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="col-12 col-md-4 mb-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p>
+                    John Doe was a brilliant student; always stood out with his
+                    assignments.
+                  </p>
+                  <p class="text-muted">Jane Doe<br />Assistant Professor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Optional Contact Form -->
+    <div class="container">
+      <div class="row justify-content-center mb-5" id="contact">
+        <div class="col-12 col-md-8">
+          <h3 class="mb-3 text-center">Contact Me</h3>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="your@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 border-top">
+      <p class="mb-0">&copy; all rights reserved 2025</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+  </body>
+</html>
